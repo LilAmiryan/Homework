@@ -16,6 +16,7 @@ public class Main {
         //ab(input.nextInt(), input.nextInt());//Task 10
         // equalsNumbersCount(input.nextInt(), input.nextInt(), input.nextInt());//Task 13
         discriminant(input.nextInt(),input.nextInt(),input.nextInt());//Task 14
+        input.close();
     }
 
     /**
@@ -89,7 +90,7 @@ public class Main {
      * @param k
      */
     public static void iceCream(int k) {
-        if (k % 3 == 0 || k % 5 == 0 || k % 3 == 5 || k % 5 == 3) {
+        if (k % 3 == 0 || k % 5 == 0  || k % 5 == 3) {
             System.out.println("You can by " + k + " balls ice cream.");
         } else
             System.out.println("You can't by " + k + " balls ice cream.");
@@ -137,9 +138,6 @@ public class Main {
     /**
      * Task 13
      *
-     * @param a
-     * @param b
-     * @param c
      */
     public static void equalsNumbersCount(int a, int b, int c) {
         int count = 0;
