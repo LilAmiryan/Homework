@@ -1,6 +1,7 @@
 package com.company.Homework_07_02_2022;
 
 public class Person {
+    static int count=0;
     String name;
     int age;
     String address;
@@ -11,9 +12,10 @@ public class Person {
        this.address=address;
        this.age=age;
        this.name=name;
+       count++;
     }
-    public void printInfoAboutPersons(){
-        System.out.println("Name : "+name+"\nAge : "+age+"\nAddress : "+address);
+    public static void printInfoAboutPersons(Person person){
+        System.out.println("Name : "+person.name+"\nAge : "+person.age+"\nAddress : "+person.address);
     }
 
 

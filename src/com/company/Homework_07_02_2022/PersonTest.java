@@ -10,7 +10,8 @@ public class PersonTest {
         Person person2 = new Person("Gevorg", 20, "Paronynanc 20/1");
         // System.out.println(person1.toString());
         //System.out.println(person2.toString());
-        person1.printInfoAboutPersons();
-        person2.printInfoAboutPersons();
+        person1.printInfoAboutPersons(person1);
+        person2.printInfoAboutPersons(person2);
+        System.out.println("How many object is created : "+Person.count);
     }
 }

@@ -1,4 +1,4 @@
-package Homework_10_02_2022;
+package com.company.Homework_10_02_2022;
 
 import java.util.Random;
 import java.util.Scanner;
@@ -11,11 +11,11 @@ public class Main {
         //System.out.println(randomNumber());//Task 3
         // System.out.println(max(input.nextInt(),input.nextInt(),input.nextInt())); //Task 5
         // floatNumber(input.nextFloat()); //Task 6
-        // iceCream(input.nextInt()); //Task 8
+         iceCream(input.nextInt()); //Task 8
         // leapYear(input.nextInt());//Task 9
         //ab(input.nextInt(), input.nextInt());//Task 10
         // equalsNumbersCount(input.nextInt(), input.nextInt(), input.nextInt());//Task 13
-        discriminant(input.nextInt(),input.nextInt(),input.nextInt());//Task 14
+        //   discriminant(input.nextInt(),input.nextInt(),input.nextInt());//Task 14
         input.close();
     }
 
@@ -90,12 +90,11 @@ public class Main {
      * @param k
      */
     public static void iceCream(int k) {
-        if (k % 3 == 0 || k % 5 == 0  || k % 5 == 3) {
-            System.out.println("You can by " + k + " balls ice cream.");
-        } else
+        if (k <= 3 && k != 4 && k != 7) {
+                System.out.println("You can by " + k + " balls ice cream.");
+        }else
             System.out.println("You can't by " + k + " balls ice cream.");
     }
-
     /**
      * Task 9
      *
@@ -137,7 +136,6 @@ public class Main {
 
     /**
      * Task 13
-     *
      */
     public static void equalsNumbersCount(int a, int b, int c) {
         int count = 0;
@@ -150,21 +148,20 @@ public class Main {
 
     /**
      * Task 14
+     *
      * @param a
      * @param b
      * @param c
      */
-    public static void discriminant(int a, int b, int c){
-        double d=Math.pow(b,2)-4*a*c;
-        if(d>0){
-            double x1=(-b+Math.sqrt(d))/4;
-            double x2=(-b-Math.sqrt(d))/4;
-            System.out.println("Roots are "+x1+"\t"+x2);
-        }
-       else if (d==0){
-            System.out.println("Roots are same "+(-b/2*a));
-        }
-        else
+    public static void discriminant(int a, int b, int c) {
+        double d = Math.pow(b, 2) - 4 * a * c;
+        if (d > 0) {
+            double x1 = (-b + Math.sqrt(d)) / 4;
+            double x2 = (-b - Math.sqrt(d)) / 4;
+            System.out.println("Roots are " + x1 + "\t" + x2);
+        } else if (d == 0) {
+            System.out.println("Roots are same " + (-b / 2 * a));
+        } else
             System.out.println("Can't be");
 
     }
