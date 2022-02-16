@@ -65,20 +65,14 @@ public class Main {
      */
     public static void squares(int a, int b) {
         int a1=(int)Math.sqrt(a);
-        int b1=(int)Math.sqrt(b);
-
+        //int b1=(int)Math.sqrt(b);
         for (int i = a; i <= b; i++) {
-           // System.out.println(i);
-
             for (int l = a1;l<b;l++){
                 if((l*l)==i){
                     System.out.println(i);
                 }
             }
-
         }
-
-        // System.out.println(2.0-2);
     }
 
     /**
@@ -158,11 +152,8 @@ public class Main {
         for (int i = 1; i <= x; i++) {
             if (x % i == 0) {
                 System.out.println(i);
-
             }
-
         }
-
     }
 
     /**
@@ -229,10 +220,10 @@ public class Main {
             if(number==0){
                 countZ++;
             }
-            if(number>0){
+            else if(number>0){
                 countP++;
             }
-            if(number<0){
+            else {
                 countN--;
             }
         }
@@ -297,16 +288,10 @@ public class Main {
     public static void coolRectangle(int n){
         for (int i=1;i<=n;i++){
             for (int j=1;j<=n;j++){
-                if(i==j) {
-                    System.out.print(" "+j + " ");
-                }
-                //System.out.println();
-                if(i==2) {
-                    if(i%2==0)
-                    System.out.print(" "+j+"");
+
                 }
             }
-        }
+
 
     }
 
@@ -329,6 +314,7 @@ public class Main {
         System.out.printf("%s%n%s%n%s%n%s%n%s%n%s", "******", "*****", "****", "***", "**", "*");
 
     }
+
 
 }
 
