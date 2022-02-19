@@ -8,7 +8,7 @@ public class Main {
         Scanner input = new Scanner(System.in);
         // numbers1of10();//Task 1
         // evenNumbers1of20();//Task 2
-        // squaresOfNumbers(input.nextInt());//Task 3
+         squaresOfNumbers(input.nextInt());//Task 3
         //  smallerDivisor(input.nextInt());//Task 4
         //powOfTwo(input.nextInt()); //Task 5
         //descendingOrder(input.nextInt()); // Task 6
@@ -22,7 +22,7 @@ public class Main {
         //deposit(input.nextDouble(), input.nextDouble(), input.nextDouble());//Task 14
         // seqondMax(); //Task 15
         // guessNumber(); //Task 16
-        sumOfDigits(input.nextInt());//Task 17
+       // sumOfDigits(input.nextInt());//Task 17
         input.close();
     }
 
@@ -62,7 +62,7 @@ public class Main {
         while (Math.pow(i, 2) < number) {
             System.out.println((int) Math.pow(i, 2));
             i++;
-            number--;
+            //number--;
         }
     }
 
