@@ -20,7 +20,8 @@ public class Main {
         // reverseTwoElements(fullArray());
         // shiftLeft(fullArray());
         // swapMaxMin(fullArray());//Task 13
-        onceInArray(fullArray());//Task 15
+        //removeElement(input.nextByte());//Task 14
+        onceInArray(fullArray());//Task 15 ?
     }
 
     /**
@@ -297,6 +298,29 @@ public class Main {
     }
 
     /**
+     * Task 14
+     *
+     * @param k
+     */
+    public static void removeElement(int k) {
+        int count = 0;
+        int array[] = {1, 2, 5, 2, 7};
+        printArray(array);
+        System.out.println();
+        for (int i = 0; i < array.length - 1; i++) {
+            if (k == array[array.length - 1]) {
+                array[array.length - 1] = array[0];
+            }
+            if (array[i] == k) {
+
+                array[i] = array[i + 1];
+                array[i + 1] = array[i + 2];
+            }
+        }
+        printArray(array);
+    }
+
+    /**
      * Task 13
      *
      * @param array
@@ -332,8 +356,28 @@ public class Main {
         printArray(array);
     }
 
-    public static void onceInArray(int [] array){
+    /**
+     * Task 15
+     * @param array
+     */
+    public static void onceInArray(int[] array) {
+        printArray(array);
+        System.out.println();
+        int k = array[0], count = 0;
+        boolean b;
+        for (int i = 0; i < array.length; i++) {
+            b = false;
+            for (int j = 0; j < array.length; j++) {
 
+                if (array[i] == array[j] && i!=j) {
+                    b = true;
+                    break;
+                }
+            }
+            if (!b) {
+                System.out.print(array[i] + " ");
+            }
 
+        }
     }
 }
