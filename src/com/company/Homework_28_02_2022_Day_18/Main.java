@@ -40,6 +40,7 @@ public class Main {
             triangle.setSideB(sideB);
         if (Validator.isValidSide(sideC))
             triangle.setSideC(sideC);
+            if(triangle.getSideA()>0 && triangle.getSideB()>0 && triangle.getSideC()>0)
         triangle.areaOrPerimetr(triangle.getSideA(), triangle.getSideB(), triangle.getSideC());
 
  */
