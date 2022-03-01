@@ -47,10 +47,9 @@ public class Triangle {
     }
 
     public boolean check(Triangle triangle) {
-        if (isTriangleValid(triangle.sideA, triangle.sideB, triangle.sideC) ) {
-            return true;
-        }
-        return false;
+
+            return  isTriangleValid(triangle.sideA, triangle.sideB, triangle.sideC);
+
     }
     private boolean isRight(byte sideA, byte sideB, byte sideC){
         if (sideB == sideA && sideA==sideC) {

@@ -2,60 +2,46 @@ package com.company.Homework_28_02_2022_Day_18;
 
 public class Validator {
     public static boolean intRange(int i) {
-        if (i >= 18 && i <= 99)
-            return true;
-        else return false;
+            return (i >= 18 && i <= 99);
     }
 
     public static boolean FirstNameLengthRange(String s) {
-        if (s.length() >= 3 && s.length() <= 15)
-            return true;
-        else return false;
+            return (s.length() >= 3 && s.length() <= 15);
     }
 
     public static boolean LastNameLengthRange(String s) {
-        if (s.length() >= 6 && s.length() <= 20)
-            return true;
-        else return false;
+            return (s.length() >= 6 && s.length() <= 20);
     }
 
     static boolean isGenderLegal(String gender) {
-        if (gender.compareToIgnoreCase("female") == 0 || gender.compareToIgnoreCase("male") == 0) {
-            return true;
-        } else return false;
+            return ("female".compareToIgnoreCase(gender) == 0 || "male".compareToIgnoreCase(gender) == 0);
     }
 
     static boolean isPassprtIdValid(String pId) {
         int size = pId.length();
         if ("AN".equals(pId.substring(0, 2)) && pId.length() == 8) {
             for (int i = 2; i < size; i++) {
-                if (Character.isDigit(pId.charAt(i))) {
-                    return true;
+                if (!Character.isDigit(pId.charAt(i))) {
+                    return false;
                 }
-                return false;
+                return true;
             }
         }
 
-        //else return false;
-        return false;
+        return true;
     }
 
     public static boolean isValidSide(byte side) {
-        if (side >= 1 && side <= 20)
-            return true;
-        return false;
+            return (side >= 1 && side <= 20);
     }
 
     public static boolean isCountOfWorkerValid(int countOfWorker) {
-        if (countOfWorker >= 2 && countOfWorker <= 50)
-            return true;
-        return false;
+            return (countOfWorker >= 2 && countOfWorker <= 50);
     }
 
     public static boolean isNameCharacterLeast3(String name) {
-        if (name.length() >= 3)
-            return true;
-        return false;
+            return (name.length() >= 3);
+
     }
 
     public static boolean isPhoneNumberValid(String phoneNumber) {
