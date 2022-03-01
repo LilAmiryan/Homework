@@ -45,7 +45,6 @@ public class Validator {
     }
 
     public static boolean isPhoneNumberValid(String phoneNumber) {
-
         if (phoneNumber.length() == 8) {
             for (int i = 0; i < phoneNumber.length(); i++) {
                 if (!Character.isDigit(phoneNumber.charAt(i))) {
