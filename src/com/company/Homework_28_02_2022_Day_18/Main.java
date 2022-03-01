@@ -16,8 +16,8 @@ public class Main {
         if (Validator.intRange(age)){
             person1.setAge(age);
         }
-        if(Validator.FirstNameLengthRange("Lalalalalalalalalala")){
-            person1.setFirstName("Lalalalalalalalalala");
+        if(Validator.FirstNameLengthRange("abcdefg")){
+            person1.setFirstName("abcdefg");
         }
         if (Validator.isPassprtIdValid("AN124785")){
             person1.setPassportId("AN124785");
