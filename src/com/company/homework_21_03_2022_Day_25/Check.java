@@ -102,9 +102,17 @@ public class Check {
         }
     }
 
+    /**
+     * 15
+     *
+     * @param
+     */
+/*
     public static void lengthOfTheLongestSubstringWithoutRepeatingCharacters(String string) {
         int count = 0;
-        int k=0;
+        int k = 0;
+        Set<Character> set = new HashSet<>();
+        Character character2[];
         Character character[] = new Character[string.length()];
         for (int i = 0; i < string.length(); i++) {
             character[i] = string.charAt(i);
@@ -120,12 +128,71 @@ public class Check {
         }
 
         for (Map.Entry<Character, Integer> entry : map.entrySet()) {
-            if (entry.getValue()>1) {
+            if (entry.getValue() > 1) {
                 count++;
+                if (!set.contains(entry.getKey())){
+                    set.add(entry.getKey());
+                }
             }
+
         }
+
         System.out.println(map);
-        System.out.println("\nlength of the longest substring without repeating characters "+map.size());
+        System.out.println("\nlength of the longest substring without repeating characters " + map.size());
+
+        System.out.println(set);
+
+    }*/
+/*
+    public static void lengthOfTheLongestSubstringWithoutRepeatingCharacters(String string) {
+        Set<Character> set=new HashSet<>();
+        Set<Character> set2=new HashSet<>();
+
+        int k=string.length();
+        for (int i = 0; i < string.length(); i++) {
+            System.out.print(string.charAt(i)+" ");
+        }
+        System.out.println();
+        int count=0;
+
+        for (int i = 0; i < string.length(); i++) {
+            if (!set.contains(string.charAt(i))){
+                set.add(string.charAt(i));
+
+            }
+            else {
+                    for (int j = 0; j <i ; j++) {
+                        set2.add(string.charAt(j));
+                    }
+
+            }
+
+            //i=0;
+        } System.out.println(set);
+        System.out.println(set2);
 
     }
+*/
+
+    public static void lengthOfTheLongestSubstringWithoutRepeatingCharacters(String s) {
+    String s1 = "";
+    for (int i = 0; i < s.length(); i++) {
+        Set<Character> set = new HashSet<>();
+        int j = i;
+        for (; j< s.length(); j++) {
+            char c = s.charAt(j);
+            if (set.contains(c)) {
+                break;
+            } else {
+                set.add(c);
+            }
+        }
+        System.out.println(set);
+        if (s1.length() < j - i + 1) {
+            s1 = s.substring(i, j);
+        }
+    }
+
+    System.out.println(s1.length());
+}
 }
