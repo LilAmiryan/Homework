@@ -51,6 +51,7 @@ public class Check {
     public static int countsOfDuplicateCharacters(String string) {
 
         int count = 0;
+        int k=0;
         Character character[] = new Character[string.length()];
         for (int i = 0; i < string.length(); i++) {
             character[i] = string.charAt(i);
@@ -65,11 +66,12 @@ public class Check {
             System.out.println(character[i] + " ");
         }
         for (Map.Entry<Character, Integer> entry : map.entrySet()) {
-            if (entry.getValue() > 1) {
-                System.out.println(entry.getKey() + " is duplicate " + entry.getValue() + " times");
+            if (entry.getValue() == 1) {
+                k++;
             }
         }
-        System.out.println("Count of duplicate elements is ");
+        int l=map.size()-k;
+        System.out.println("Count of duplicate elements is "+l);
 
         return count;
     }
@@ -143,8 +145,8 @@ public class Check {
         System.out.println(set);
 
     }*/
-/*
-    public static void lengthOfTheLongestSubstringWithoutRepeatingCharacters(String string) {
+
+/*    public static void lengthOfTheLongestSubstringWithoutRepeatingCharacters(String string) {
         Set<Character> set=new HashSet<>();
         Set<Character> set2=new HashSet<>();
 
@@ -173,7 +175,7 @@ public class Check {
 
     }
 */
-
+/*
     public static void lengthOfTheLongestSubstringWithoutRepeatingCharacters(String s) {
     String s1 = "";
     for (int i = 0; i < s.length(); i++) {
@@ -195,4 +197,32 @@ public class Check {
 
     System.out.println(s1.length());
 }
+
+ */
+
+    public static void lengthOfTheLongestSubstringWithoutRepeatingCharacters(String string) {
+        Map<Character, Integer> map=new HashMap<>();
+        int count=0;
+        Character character[];
+        int k=0;
+        for (int i=0; i < string.length(); i++) {
+            if (map.containsKey(string.charAt(i))){
+                map.put(string.charAt(i),map.get(string.charAt(i))+1);
+                k=i;
+
+            }
+            else map.put(string.charAt(i),1); character=new Character[k];
+            for (int j=0;j<k;j++){
+                character[j]=string.charAt(j);
+                //System.out.print(string.charAt(j)+" "); System.out.println(character.toString());
+            }
+
+        }
+
+
+
+        for(Map.Entry<Character, Integer> entry: map.entrySet()){
+
+        }
+    }
 }
